@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Charset & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic SEO -->
+  <title>SEO and Core Web Vitals in HTML</title>
+  <meta name="description" content="Learn how to structure an HTML page with clean semantics, fast-loading assets, and SEO-friendly metadata to improve Core Web Vitals." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/seo-core-web-vitals" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SEO and Core Web Vitals in HTML" />
+  <meta property="og:description" content="Clean semantic HTML with fast-loading best practices to boost Core Web Vitals." />
+  <meta property="og:url" content="https://example.com/seo-core-web-vitals" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SEO and Core Web Vitals in HTML" />
+  <meta name="twitter:description" content="Clean semantic HTML with fast-loading best practices to boost Core Web Vitals." />
+  <meta name="twitter:image" content="https://example.com/og-image.jpg" />
+
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+ 
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <header>
+    <div class="container" role="banner" aria-label="Site header">
+      <a class="brand" href="/" aria-label="CodeWithZohaib — Home">
+        <!-- Inline SVG logo placeholder -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 12h8M10 9l-2 3 2 3M14 9l2 3-2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>CodeWithZohaib</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="content" class="container" role="main">
+    <article class="card" itemscope itemtype="https://schema.org/Article">
+      <h1 itemprop="headline">SEO and Core Web Vitals in HTML</h1>
+      <p itemprop="description">
+        This page demonstrates a clean, semantic HTML layout with fast-loading best practices,
+        helping improve <strong>Largest Contentful Paint (LCP)</strong>, <strong>Cumulative Layout Shift (CLS)</strong>, and
+        <strong>Interaction to Next Paint (INP)</strong>.
+      </p>
+
+      <!-- Example image with explicit dimensions & lazy-loading for CLS -->
+      <figure>
+        <img
+          src="https://via.placeholder.com/1200x630.png?text=SEO+%26+Core+Web+Vitals"
+          width="1200" height="630" alt="Illustration for SEO and Core Web Vitals"
+          loading="lazy" decoding="async" />
+        <figcaption>Set width/height, use <code>loading="lazy"</code> and <code>decoding="async"</code> for better performance.</figcaption>
+      </figure>
+
+      <section aria-labelledby="tips">
+        <h2 id="tips">Quick Tips</h2>
+        <ul>
+          <li>Use a concise, unique <code>&lt;title&gt;</code> and <code>meta description</code>.</li>
+          <li>Ensure images include explicit <code>width</code>/<code>height</code> to avoid layout shift.</li>
+          <li>Serve critical styles inline; load the rest asynchronously.</li>
+          <li>Prefer semantic tags: <code>header</code>, <code>main</code>, <code>article</code>, <code>section</code>, <code>footer</code>.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    
+      © <span id="year"></span> CodeWithZohaib. All rights reserved.
+  
+  </footer>
+
+</body>
+</html>
