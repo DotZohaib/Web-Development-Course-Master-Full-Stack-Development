@@ -1,0 +1,10 @@
+/* *{
+    margin: 0;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    
+} */
+#External_css{
+    background-color: rgb(255, 0, 0);
+    color: yellow;
+}
