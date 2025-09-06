@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    background-color: cadetblue;
+    /* width: 100%; */
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.box{
+    background-color: rgb(255, 0, 0);
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+}

@@ -1,0 +1,28 @@
+*{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cadetblue;
+}
+  /*   CSS Specificity & Cascade 
+          1) inline style
+          2) ID Selector
+          3) Class Selector
+          4) Element Selector
+          5) Universal Selector  */
+
+h1{
+    color: rgb(255, 0, 255);
+}
+.red{
+    color: red !important;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
