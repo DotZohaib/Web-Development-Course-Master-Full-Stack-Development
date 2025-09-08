@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>
+    <meta name="description" content="Styling Lists using CSS">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        background-color: blue;
+        color: white;
+        width: 100vw;
+    }
+    nav ul{
+        color: white;
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    nav ul li {
+        list-style: none;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        font-style: italic;
+    }
+
+    
+</style>
+<body>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+</body>
+</html>

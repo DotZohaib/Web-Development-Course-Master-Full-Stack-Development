@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <meta name="description" content="CSS Position Property">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav ul {
+        width: 100vw;
+        height: 77px;
+        background-color: blue;
+        color: white;
+        padding: 10px 10px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        position: sticky;
+        top: 0px;
+        gap: 30px;
+    }
+    nav ul li {
+        list-style: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: relative;
+        border:  3px solid red;
+        /* z-index: 1; */
+    }
+    .box1{
+        background-color: blue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        width: 100px;
+        height: 100px;
+        margin: 10px 10px;
+    }
+    .box2{
+        background-color: rgb(255, 0, 0);
+        color: white;
+        width: 100px;
+        height: 100px;
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        margin: 10px 10px;
+    }
+    .box3{
+        background-color: rgb(51, 255, 0);
+        color: white;
+        width: 100px;
+        height: 100px;
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        /* margin: 10px 10px; */
+        position: absolute;
+        top: 0px; 
+        perspective: 4rem;
+    }
+    #footer{
+        width: 100vw;
+        height: 77px;
+        background-color: blue;
+        color: white;
+        padding: 10px 10px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-style: italic;
+        position: fixed;
+        bottom: 0px;
+    }
+</style>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <h1>
+        <b>important</b>: Transform , filter, or perspective properties can make an elements position relative to its normal position
+    </h1>
+    <div class="container">
+        <div class="box1">
+            Box 1
+        </div>
+        <div class="box2">
+            Box 2
+        </div>
+        <div class="box3">
+            Box 3
+        </div>
+    </div>
+    <footer id="footer">
+        <p>Copyright &copy; 2023</p>
+        
+    </footer>   
+    
+</body>
+</html>
