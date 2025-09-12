@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transforms MasterClass</title>
+    <meta name="description" content="CSS Transforms MasterClass" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+        justify-items: center;
+      }
+      .box {
+        background-color: crimson;
+        color: #fff;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+      }
+      /* Transform Properties */
+      .box1:hover { transform: scaleX(1.5); }
+      .box2:hover { transform: scaleY(1.5); }
+      .box3:hover { transform: scale(1.5); }
+      .box4:hover { transform: translateX(50px); }
+      .box5:hover { transform: translateY(50px); }
+      .box6:hover { transform: translate(50px, 50px); }
+      .box7:hover { transform: matrix(1, 0.5, -0.5, 1, 30, 20); }
+      .box8:hover { transform: rotate(45deg); }
+      .box9:hover { transform: skew(20deg, 20deg); }
+      .box10:hover { transform: skewX(25deg); }
+      .box11:hover { transform: skewY(25deg); }
+      .box12:hover { transform: matrix3d(1,0,0,0, 0,1,0.5,0, 0,0,1,0, 0,0,0,1); }
+      .box13:hover { transform: translate3d(40px, 40px, 40px); }
+      .box14:hover { transform: rotateX(60deg); }
+      .box15:hover { transform: rotateY(60deg); }
+      .box16:hover { transform: translateZ(80px) perspective(300px); }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center; color:#333;">CSS Transforms MasterClass</h1>
+    <div class="container">
+      <div class="box box1">ScaleX</div>
+      <div class="box box2">ScaleY</div>
+      <div class="box box3">Scale</div>
+      <div class="box box4">TranslateX</div>
+      <div class="box box5">TranslateY</div>
+      <div class="box box6">Translate</div>
+      <div class="box box7">Matrix</div>
+      <div class="box box8">Rotate</div>
+      <div class="box box9">Skew</div>
+      <div class="box box10">SkewX</div>
+      <div class="box box11">SkewY</div>
+      <div class="box box12">Matrix3D</div>
+      <div class="box box13">Translate3D</div>
+      <div class="box box14">RotateX</div>
+      <div class="box box15">RotateY</div>
+      <div class="box box16">TranslateZ</div>
+    </div>
+  </body>
+</html>

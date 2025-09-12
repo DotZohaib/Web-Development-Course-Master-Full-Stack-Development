@@ -6,7 +6,55 @@
     <title>CSS Flexbox - Ultimate MasterClass</title>
     <meta name="description" content="CSS Flexbox - Ultimate MasterClass">
 </head>
+<style>
+    .main{
+        display: flex;
+        align-items: flex-start;
+        height: 40vw;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        
+    }
+    .box1{
+        background-color: red;
+        height: 100px;
+        width: 100px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 10px 10px;
+    }
+    .box2{
+        background-color: green;
+        height: 100px;
+        width: 100px;
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 10px 10px;
+    }
+    .box3{
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 10px 10px;
+    }
+</style>
 <body>
     <h1>CSS Flexbox - Ultimate MasterClass</h1>
+    <main class="main">
+        <div class="box1">
+          Box 1
+        </div>
+        <div class="box2">
+            Box 2
+        </div>
+        <div class="box3">
+            Box 3
+        </div>
+    </main>
 </body>
 </html>
