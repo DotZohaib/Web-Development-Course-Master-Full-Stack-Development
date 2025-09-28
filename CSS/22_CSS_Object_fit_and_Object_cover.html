@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object-fit and Object-cover</title>
+    <meta name="description" content="CSS Object-fit and Object-cover">
+</head>
+<style>
+    .box{
+        width: 400px;
+        height: 300px;
+        border: 2px solid red;
+    }
+    img{
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        object-position: top right;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="pexels-pixabay-414023.jpg" alt="woman" width="600px" height="400px">
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -30,30 +30,41 @@
       background-color: red;
       position: absolute;
       top: 0;
-      left: -350px; /* hidden by default */
+      left: 0; /* slide in when active */
       transition: left 0.5s ease-in-out;
     }
+    
+    .side.active {
+      left: -350px; /* hidden by default */
+    }
 
-    .side a {
+   a {
       text-decoration: none;
       color: white;
       font-size: 30px;
       position: absolute;
       top: 10px;
       right: 10px;
-    }
-
-    /* Hover effect: slide menu in */
-    .container:hover .side {
-      left: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="side">
-      <a href="#">🤷‍♀️</a>
+    <div class="side" id="sidebar">
     </div>
+    <a id="toggleBtn">🤷‍♀️</a>
   </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

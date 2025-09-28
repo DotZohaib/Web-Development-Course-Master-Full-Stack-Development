@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting and Removing Elements using JavaScript</title>
+    <meta
+      name="description"
+      content="Inserting and Removing Elements using JavaScript"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Inserting and Removing Elements using JavaScript</div>
+    </div>
+
+    <script>
+        document.designMode ="on"; // to enable editing of the document
+      document.querySelector(".box").contentEditable = "true"; // to enable editing of a specific element
+      document.querySelector(".box").spellcheck = "true"; // to enable spellcheck of a specific element
+      document.querySelector(".box").dir = "rtl"; // to change the direction of text in a specific element
+      document.querySelector(".container").innerHTML;
+      document.querySelector(".container").outerHTML;
+      document.querySelector(".container").tagName;
+      document.querySelector(".container").className;
+        document.querySelector(".container").id;
+        document.querySelector(".container").nodeName;
+        document.querySelector(".container").childNodes;
+        document.querySelector(".container").innerHTML = `<div class="box">Hello World</div>`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations</title>
+  <meta name="description" content="CSS Animations">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: blue;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden; /* hide box when it goes out of screen */
+      position: relative;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: red;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: move 6s linear infinite;
+    }
+
+    @keyframes move {
+      from {
+        left: -220px; /* start outside left */
+      }
+      to {
+        left: 100vw; /* move fully to right side */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">BANNER</div>
+  </div>
+</body>
+</html>

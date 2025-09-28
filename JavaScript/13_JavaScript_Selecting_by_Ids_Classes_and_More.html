@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Selecting by Ids, Classes, and More</title>
+    <meta
+      name="description"
+      content="JavaScript - Selecting by Ids, Classes, and More"
+    />
+  </head>
+  <style>
+    .container {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 20px;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5 {
+      border: 2px solid red;
+      padding: 20px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- <div id="boxId" class="box1">I am Box 1</div> -->
+       <div id="boxId" class="box1 boxes">
+      Counter: 0
+    </div>
+      <div class="box2 boxes">I am Box 2</div>
+      <div class="box3 boxes">I am Box 3</div>
+      <div class="box4 boxes">I am Box 4</div>
+      <div class="box5 boxes">I am Box 5</div>
+      <button id="btn">Click</button>
+    </div>
+
+    <script>
+      let box = document.getElementsByClassName("box3");
+      console.log(box);
+      box[0].style.backgroundColor = "blue";
+      box[0].style.color = "white";
+      document.getElementById("boxId").style.backgroundColor = "green";
+      document.getElementById("boxId").style.color = "white";
+
+    //   document.getElementById("btn").addEventListener("click", () => {
+    //     document.getElementById("boxId").innerHTML = "I am clicked";
+    //   });
+
+     let count = 0; // Counter variable
+
+    document.getElementById("btn").addEventListener("click", () => {
+      count++; // Increment counter
+      document.getElementById("boxId").innerHTML = "Counter: " + count;
+    });
+
+
+    document.querySelectorAll(".boxes").forEach((container) => {
+        console.log(container);
+        container.style.backgroundColor = "lightblue";
+        
+    })
+    </script>
+  </body>
+</html>
