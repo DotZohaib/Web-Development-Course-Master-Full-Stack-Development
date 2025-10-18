@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callbacks & Promises</title>
+    <meta name="description" content="JavaScript Callbacks & Promises">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            JavaScript Callbacks & Promises
+        </div>
+    </div>
+    <script>
+//         🔹 JavaScript Callback
+
+// Callback ek function hota hai jo kisi doosre function ko argument ke taur par diya jata hai, aur wo baad me chalaya jata hai.
+
+// 👉 Simple example:
+
+function sayHello(name, callback) {
+  console.log("Hello " + name);
+  callback(); // ye baad me chalega
+}
+
+function afterHello() {
+  console.log("This runs after sayHello!");
+}
+
+sayHello("Zohaib", afterHello);
+
+
+// Output:
+
+// Hello Zohaib
+// This runs after sayHello!
+
+
+// ➡️ Matlab pehle sayHello chala, phir callback function afterHello run hua.
+
+// 🔹 JavaScript Promise
+
+// Promise ek object hota hai jo future me result deta hai (success ya failure).
+// Promise ke 3 states hoti hain:
+
+// Pending (wait kar raha hai)
+
+// Resolved (fulfilled) (sahi result mil gaya)
+
+// Rejected (error aagaya)
+
+// 👉 Example:
+
+let myPromise = new Promise((resolve, reject) => {
+  let success = true; // condition check karna
+
+  if (success) {
+    resolve("✅ Promise fulfilled! Data received.");
+  } else {
+    reject("❌ Promise rejected! Something went wrong.");
+  }
+});
+
+myPromise
+  .then((result) => {
+    console.log(result); // agar resolve hua
+  })
+  .catch((error) => {
+    console.log(error); // agar reject hua
+  });
+
+
+// Output agar success = true:
+
+// ✅ Promise fulfilled! Data received.
+
+
+// Output agar success = false:
+
+// ❌ Promise rejected! Something went wrong.
+
+// 🔑 Callback vs Promise
+
+// Callback: ek function ko doosre function ke andar chala dete hain.
+
+// Promise: asynchronous ka kaam simple aur readable banata hai (error handling easy hoti hai).
+    </script>
+</body>
+</html>

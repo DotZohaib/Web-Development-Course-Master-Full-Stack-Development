@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to create a new element in DOM</title>
+    <meta name="description" content="How to create a new element in DOM" />
+    <style>
+      .parent div {
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">child 1</div>
+      <div class="child2">child 2</div>
+      <div class="child3">child 3</div>
+      <div class="child4">child 4</div>
+    </div>
+
+    <script>
+      // Select parent element
+      let parent = document.querySelector(".parent");
+      console.log(parent);
+
+      // Apply background colors to children
+      parent.children[0].style.backgroundColor = "red";
+      parent.children[1].style.backgroundColor = "yellow";
+      parent.children[2].style.backgroundColor = "green";
+      parent.children[3].style.backgroundColor = "blue";
+
+      // Loop through all children and log their content
+      for (let child = 0; child < parent.children.length; child++) {
+        const element = parent.children[child].innerHTML;
+        console.log(element);
+      }
+
+      // ✅ Example: Create a new element dynamically
+      const newChild = document.createElement("div");
+      newChild.className = "child5";
+      newChild.textContent = "child 5 (created dynamically)";
+      newChild.style.backgroundColor = "purple";
+      parent.appendChild(newChild);
+    </script>
+  </body>
+</html>

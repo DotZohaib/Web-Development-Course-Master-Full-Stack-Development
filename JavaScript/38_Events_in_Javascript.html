@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Javascript</title>
+    <meta name="description" content="Events in Javascript">
+</head>
+<body>
+    <h1 id="text">
+        Events in Javascript
+        
+    </h1>
+    <button id="btn">Click Me</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            let text = document.getElementById("text");
+            text.innerHTML = "Thank You For Apply Please Wait...";
+            
+            setTimeout(() => {
+                text.innerHTML = "Please Wait Sir...";
+                
+            }, 2000);
+            setTimeout(() => {
+                text.innerHTML = "Loading...";
+                
+            }, 4000);
+            setTimeout(() => {
+                text.innerHTML = "✔ Successfully Applied...";
+                
+            }, 6000);
+        })
+
+    </script>
+    
+</body>
+</html>

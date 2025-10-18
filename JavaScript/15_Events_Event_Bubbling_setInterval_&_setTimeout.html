@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events, Event Bubbling, setInterval & setTimeout</title>
+    <meta name="description" content="Events, Event Bubbling, setInterval & setTimeout">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box">
+            Events, Event Bubbling, setInterval & setTimeout
+        </div>
+    </div>
+
+    <button type="submit" id="btn">Submit</button>
+    
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            document.getElementById("box").innerHTML = "Button Clicked!";
+        });
+    </script>
+</body>
+</html>

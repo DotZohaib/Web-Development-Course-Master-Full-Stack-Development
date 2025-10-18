@@ -7,37 +7,47 @@
 // console.log(arr.shift()); // remove first element
 // console.log(arr.unshift(0)); // add element at start
 // console.log(arr.slice(1, 4)); // from index 1 to 4 (4 not included)
+// console.log(arr.includes(3)); // check if array includes element
+// console.log(arr.indexOf(3)); // get index of elements
+
+
+
 // // console.log(arr.reverse());
 // console.log(delete arr[2]); // delete element at index 2 but keeps the index empty and does not remove the element from the array
 // console.log(arr);
 
+// //  forEach Loop
+
+// let myArr = [1, 2, 3, 4, 5];
+
+// myArr.forEach((value, index, arr) => {
+//   console.log(`Value: ${value}, Index: ${index}, Array: ${arr}`);
+// });
+
+// //  for if Loop
+
+// let object = {
+//   name: "Zohaib",
+//   age: 20,
+//   city: "Larkana",
+//   country: "Pakistan",
+//   isMarried: false,
+// };
+
+// for (const key in object) {
+//   if (!Object.hasOwn(object, key)) continue;
+
+//   const element = object[key];
+//   console.log(`Key: ${key}, Value: ${element}`);
+// }
 
 
-//  forEach Loop
-
-let myArr = [1, 2, 3, 4, 5];
-
-myArr.forEach((value, index, arr) =>{
-    console.log(`Value: ${value}, Index: ${index}, Array: ${arr}`);
-})
 
 
+let marvelHeroes = ["Thor", "IronMan", "SpiderMan"]
+let dcHeroes = ["Superman", "BatMan", "Flash"]
 
-//  for if Loop
-
-let object ={
-    name: "Zohaib",
-    age: 20,
-    city: "Larkana",
-    country: "Pakistan",
-    isMarried: false
-}
-
-for (const key in object) {
-    if (!Object.hasOwn(object, key)) continue;
-    
-    const element = object[key];
-    console.log(`Key: ${key}, Value: ${element}`); 
-    
-    
-}
+let allHeroesConcat = marvelHeroes.concat(dcHeroes) // merge the array using concat  method 
+let allHeroesSpread = [...marvelHeroes, ...dcHeroes] // merge the array using spread  method 
+console.log("allHeroesConcat", allHeroesConcat);
+console.log("allHeroesSpread", allHeroesSpread);

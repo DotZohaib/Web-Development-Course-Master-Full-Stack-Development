@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText vs textContent vs innerHTML</title>
+    <meta name="description" content="innerText vs textContent vs innerHTML" />
+    <style>
+      #hide {
+        display: none;
+      }
+      #hide1 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>innerText vs textContent vs innerHTML</h1>
+
+    <!-- 🧩 1. innerText
+      ➡️ Sirf text dikhata hai (jo screen par visible hota hai).
+      ➡️ HTML tags ignore karta hai.
+      ➡️ Line breaks aur hidden elements ko consider karta hai.
+    -->
+    <p id="demo1">
+      Hello Zohaib <b id="hide1">I am innerText</b>
+    </p>
+
+    <!-- 🧩 2. textContent
+      ➡️ Ye bhi sirf text deta hai but ye hidden text bhi include karta hai.
+      ➡️ Ye HTML formatting ko ignore karta hai (sirf plain text return karta hai).
+    -->
+    <p id="demo2">
+      Hello Zohaib <b id="hide">I am textContent</b>
+    </p>
+
+    <!-- 🧩 3. innerHTML
+      ➡️ Ye HTML code ke sath poora content deta hai.
+      ➡️ Tum HTML tags ke sath text ko read ya set kar sakte ho.
+    -->
+    <p id="demo3">
+      Hello <b>Zohaib</b> I am innerHTML
+    </p>
+
+    <!-- 🎯 Summary Table
+      | Property        | HTML Tags Show? | Hidden Text Show? | Example Output        |
+      | --------------- | --------------- | ----------------- | --------------------- |
+      | **innerText**   | ❌ No            | ❌ No              | Hello Zohaib          |
+      | **textContent** | ❌ No            | ✅ Yes             | Hello Zohaib I am textContent |
+      | **innerHTML**   | ✅ Yes           | ✅ Yes             | Hello <b>Zohaib</b> I am innerHTML |
+    -->
+
+    <script>
+      // innerText → ignores hidden text
+      console.log("innerText:", document.getElementById("demo1").innerText);
+
+      // textContent → includes hidden text
+      console.log("textContent:", document.getElementById("demo2").textContent);
+
+      // innerHTML → shows HTML structure
+      console.log("innerHTML:", document.getElementById("demo3").innerHTML);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Objects - Object Oriented Programming in Js</title>
+    <meta name="description" content="Classes & Objects - Object Oriented Programming in Js">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Classes & Objects - Object Oriented Programming in Js
+        </div>
+    </div>
+
+    <script>
+       class Car {
+        constructor(name) {
+            this.name = name;
+            console.log("Object Created");
+        }
+        start() {
+            console.log("Car started");
+        }
+        stop() {
+            console.log("Car stopped");
+        }
+       }
+
+       class Lion extends Car {
+
+       }
+
+
+
+       let a = new Car("Zohaib");
+       console.log(a);
+       a.start();
+       a.stop();
+
+
+
+        let z = new Lion("Sheera");
+       console.log(z);
+    </script>
+</body>
+</html>

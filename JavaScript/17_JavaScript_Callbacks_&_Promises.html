@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Callbacks & Promises</title>
+  <meta name="description" content="JavaScript Callbacks & Promises">
+</head>
+<body>
+  <div class="container">
+    <div id="box">
+      JavaScript Callbacks & Promises
+    </div>
+    <button type="button" id="btn">Submit Form</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const box = document.getElementById("box");
+
+    btn.addEventListener("click", () => {
+      btn.disabled = true; // disable button while processing
+      box.innerHTML = "Loading...";
+      btn.innerText = "Loading..."; // change button text too
+      
+      setTimeout(() => {
+          box.innerHTML = "Please wait...";
+        }, 2000);
+        
+        setTimeout(() => {
+            box.innerHTML = "Processing...";
+        }, 4000);
+        
+        setTimeout(() => {
+            box.innerHTML = "Successfully Done your Project Submission ✅";
+            btn.innerText = "Done Successfully ✅"; // change button text too
+            btn.disabled = true; // disable button while processing
+        // btn.disabled = false; // enable button again if needed
+      }, 6000);
+    });
+  </script>
+</body>
+</html>
